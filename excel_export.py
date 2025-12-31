@@ -10,7 +10,7 @@ st.set_page_config(page_title="모모유부 엑셀 데이터 추출기", layout=
 st.title("📂 모모유부 지점별 통합 데이터 추출 (엑셀 추출용)")
 
 # 파일 경로
-file_path = r'C:\Users\Administrator\OneDrive\바탕 화면\python_study\지점별 샘플러스 데이터_2025.12.29.xlsx'
+file_path = '지점별 샘플러스 데이터_2025.12.29.xlsx'
 DUPLICATE_LIMIT = 30 
 
 @st.cache_data(ttl=600)
@@ -168,4 +168,5 @@ if status == "SUCCESS" and df_main is not None:
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
 else:
+
     st.error(f"오류: {status}")
